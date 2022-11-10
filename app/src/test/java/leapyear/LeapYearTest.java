@@ -11,8 +11,14 @@ public class LeapYearTest {
     }
 
     @Test
-    public void testDivisibleby400() {
+    public void testDivisibleby4and400() {
         LeapYear lP = new LeapYear();
-        assertTrue("Year divisible by 400 is a leap year", lP.checkLeapYear(1600));
+        assertTrue("Year divisible by 4 and 400 is a leap year", lP.checkLeapYear(1600));
+    }
+
+    @Test
+    public void testDivisibleby4and400and100() {
+        LeapYear lP = new LeapYear();
+        assertFalse("Year divisible by 4 and 400 and is not a leap year", lP.checkLeapYear(2100));
     }
 }
